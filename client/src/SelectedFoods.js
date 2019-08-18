@@ -4,14 +4,14 @@ export default function SelectedFoods(props) {
   const { foods } = props;
 
   const foodRows = foods.map((food, idx) => (
-    <tr>
+    <tr key={idx}>
       <td>{food.description}</td>
       <td className="right aligned">{food.kcal}</td>
       <td className="right aligned">{food.protein_g}</td>
       <td className="right aligned">{food.fat_g}</td>
       <td className="right aligned">{food.carbohydrate_g}</td>
       <td className="centre aligned"><a href={"https://www.google.com/search?q="+ food.description} target='_blank'>additional details</a></td>
-      <td key={idx} onClick={() => props.onFoodClick(idx)}>remove</td>
+      <td  onClick={() => props.onFoodClick(idx)}>remove</td>
     </tr>
   ));
 
