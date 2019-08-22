@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 export default function SelectedFoods(props) {
   const { foods } = props;
@@ -10,8 +12,8 @@ export default function SelectedFoods(props) {
       <td className="right aligned">{food.protein_g}</td>
       <td className="right aligned">{food.fat_g}</td>
       <td className="right aligned">{food.carbohydrate_g}</td>
-      <td className="centre aligned"><a href={"https://www.google.com/search?q="+ food.description} target='_blank'>additional details</a></td>
-      <td  onClick={() => props.onFoodClick(idx)}>remove</td>
+      <td><a href={"https://www.google.com/search?q="+ food.description} target='_blank'>Google Me</a></td>
+      <td  onClick={() => props.onFoodClick(0)} className="trash"><FontAwesomeIcon icon={faTrashAlt} /></td>
     </tr>
   ));
 
@@ -29,8 +31,8 @@ export default function SelectedFoods(props) {
           <th>Protein (g)</th>
           <th>Fat (g)</th>
           <th>Carbs (g)</th>
-          <th>additional info</th>
-          <th> </th>
+          <th>Details</th>
+          <th />
         </tr>
       </thead>
       <tbody>
@@ -51,8 +53,8 @@ export default function SelectedFoods(props) {
           <th className="right aligned" id="total-carbohydrate_g">
             {sum(foods, "carbohydrate_g")}
           </th>
-          <th className="right aligned" id="additional_info"/>
-          <th className="right aligned" id="remove"/>
+          <th/>
+          <th/> 
         </tr>
       </tfoot>
     </table>

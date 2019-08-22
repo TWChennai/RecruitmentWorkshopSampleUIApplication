@@ -5,31 +5,22 @@
   "proxy": "http://localhost:3001/",
   "devDependencies": {
     "enzyme": "2.4.1",
-    "react-addons-test-utils": "15.4.0"
+    "react-addons-test-utils": "15.4.0",
+    "react-scripts": "0.8.5"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.21",
+    "@fortawesome/free-solid-svg-icons": "^5.10.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "babel-plugin-transform-class-properties": "6.22.0",
     "react": "15.4.0",
     "react-dom": "15.4.0",
-    "semantic-ui": "^2.4.2",
-    "react-scripts": "^3.1.1"
+    "semantic-ui": "^2.2.10"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   }
 }
